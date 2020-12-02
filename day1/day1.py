@@ -7,15 +7,13 @@ def read_file(filename):
 
 def silver(input_data):
     for n1 in input_data:
-        for n2 in input_data:
-                if n1+n2 == 2020:
-                    return(n1*n2)
+        if (n2 := 2020 - n1) in input_data:
+            return(n1*n2)
 
 def gold(input_data):
     for n1 in input_data:
         for n2 in input_data:
-            for n3 in input_data:
-                if n1+n2+n3 == 2020:
+            if (n3 := 2020 - (n1 + n2)) in input_data:
                     return(n1*n2*n3)
 
 def main(filename):
