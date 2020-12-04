@@ -36,7 +36,7 @@ class Field:
         content = [line for line in string.split('\n') if line]
 
         trees = [
-            [True if point == "#" else False for point in row]
+            [(point == "#") for point in row]
             for row in content
         ]
 

@@ -1,7 +1,8 @@
-from toboggan import *
 import unittest
-from unittest.mock import MagicMock, patch, mock_open
+from unittest.mock import patch, mock_open
 from pytest import fixture, mark
+
+from toboggan import Toboggan, Field, Coordinates
 
 
 @fixture(scope='class')
